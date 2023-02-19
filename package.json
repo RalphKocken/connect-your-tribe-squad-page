@@ -1,7 +1,7 @@
 {
-  "name": "connect-your-tribe-squad-page",
+  "name": "connect-your-tribe-profile-card",
   "version": "1.0.0",
-  "description": "Redesign met je squad een squadpagina op basis van een bestaande API.",
+  "description": "Redesign je visitekaartje op basis van een bestaande API.",
   "main": "index.js",
   "type": "module",
   "directories": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fdnd-task/connect-your-tribe-squad-page.git"
+    "url": "git+https://github.com/fdnd-task/connect-your-tribe-profile-card.git"
   },
   "keywords": [
     "node",
@@ -23,9 +23,9 @@
   "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/fdnd-task/connect-your-tribe-squad-page/issues"
+    "url": "https://github.com/fdnd-task/connect-your-tribe-profile-card/issues"
   },
-  "homepage": "https://github.com/fdnd-task/connect-your-tribe-squad-page#readme",
+  "homepage": "https://github.com/fdnd-task/connect-your-tribe-profile-card#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",

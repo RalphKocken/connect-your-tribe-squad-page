@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --compare-bg-section: #f6f6f6;
+    --main-bg-color: black;
+    --member-card-color: #3d5a80;
+}
+
+.title-big{
+    font-size: 1.2rem;
+}
+
+body{
+    font-family: mulish, sans-serif;
+    color: white;
+    background-color: black;
+}
+
+header{ 
+    height: 20vh;
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto 5vh auto;
+    padding: 2vh;
+}
+
+.compare-length{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 40vh;
+    border-bottom: 3px solid #d65745;
+    margin: 0 auto;
+}
+
+.shaq-name-height{
+    position: absolute;
+    left: 10%;
+    top: -3rem;
+}
+
+.your-name-height{
+    position: absolute;
+    right: 10%;
+    top: -3rem;
+}
+
+.shaq{
+    height: 100%;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+}
+
+.manicon{
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    height: 80%;
+}
+
+.member-section{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 1.5rem;
+    height: 35vh;
+    padding: 0 0 0 2rem;
+}
+
+.member-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    gap: 1rem;
+    background-color: transparent;
+    border-style: none;
+    color: white;
+}
+
+.member-avatar{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media only screen and (min-width: 875px){
+
+    main{
+        display: flex;
+    }
+
+    .compare-length{
+        height: 70vh;
+    }
+
+    .shaq{
+        left: 0;
+    }
+
+    .manicon{
+        right: 0;
+    }
+
+    .member-section{
+        flex-wrap: wrap;
+        width: 60%;
+        height: 70vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        justify-content: center;
+    }
+
+
+}

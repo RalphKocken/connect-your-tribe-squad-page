@@ -1,0 +1,46 @@
+<%- include('./partials/head') %>
+
+<header>
+        <p class="title-big">Vergelijk de lengte van alle leden van squad B naast de lengte van Shaquille O'Neal</p>
+</header>
+
+<main>
+    <section class="compare-length">
+        <section class="shaq-name-height">
+            <p class="shaq-name">Shaquille O'Neal</p>
+            <p class="shaq-height">216cm</p>
+        </section>
+
+        <section class="your-name-height">
+            <p class="your-name">Your Name</p>
+            <p class="your-height">183cm</p>
+        </section>
+        
+        <img class="shaq" src="Images/shaq.png">
+        <img class="manicon" src="Images/manicon.png">
+    </section>
+
+    <section class="member-section">
+        <!-- Hier komen de members -->
+        <% squad.members.forEach(member => { %>
+
+        <button class="member-cards memberbutton">
+          <% if (member.avatar) { %>
+          <img class="member-avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+          <% }else{ %>
+          <img class="member-avatar" src="Images/placeholder.png" alt="Placeholder avatar" />
+          <% } %>
+          <h3><%= member.name %> <%= member.prefix %> <%= member.surname %></h3>
+          </button>
+        <% }) %>
+
+    <button class="test1">test1</button>
+    <button class="test2">test2</button>
+    </section>
+</main>
+
+<footer>
+
+</footer>
+    
+<%- include('./partials/foot') %>
