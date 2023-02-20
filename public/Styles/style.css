@@ -9,21 +9,29 @@
     --member-card-color: #3d5a80;
 }
 
+.disclaimer{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .title-big{
     font-size: 1.2rem;
 }
 
 body{
     font-family: mulish, sans-serif;
+    height: 100vh;
     color: white;
-    background-color: black;
+    background: rgb(0,0,0);
+    background: linear-gradient(127deg, rgba(0,0,0,1) 0%, rgba(130,128,128,1) 100%);
 }
 
 header{ 
     height: 20vh;
     width: 100%;
     max-width: 35rem;
-    margin: 0 auto 5vh auto;
+    margin: 0 0 5vh 0;
     padding: 2vh;
 }
 
@@ -34,6 +42,7 @@ header{
     height: 40vh;
     border-bottom: 3px solid #d65745;
     margin: 0 auto;
+    gap: 5%;
 }
 
 .shaq-name-height{
@@ -60,6 +69,7 @@ header{
     bottom: 0;
     right: 20%;
     height: 80%;
+    transition: 1s;
 }
 
 .member-section{
@@ -70,6 +80,11 @@ header{
     gap: 1.5rem;
     height: 35vh;
     padding: 0 0 0 2rem;
+}
+
+.memberbutton:hover{
+    opacity: 50%;
+
 }
 
 .member-cards{
@@ -118,6 +133,4 @@ header{
         overflow-y: scroll;
         justify-content: center;
     }
-
-
 }
