@@ -2,7 +2,6 @@
 <%- include('./partials/nav') %>
 <header>
         <p class="title-big">Vergelijk de lengte van alle leden van squad B naast de lengte van Shaquille O'Neal</p>
-        <p class="disclaimer">*wegens privacy redenen zijn de lengtes van alle squadmembers random gegenereerd.</p>
 </header>
 
 <main>
@@ -21,7 +20,7 @@
         <img class="manicon" src="Images/manicon.png">
     </section>
 
-    <section class="member-section">
+    <section class="member-section fade-out-content">
         <!-- Hier komen de members -->
         <% squad.members.forEach(member => { %>
 
@@ -31,17 +30,13 @@
           <% }else{ %>
           <img class="member-avatar" src="Images/placeholder.png" alt="Placeholder avatar" />
           <% } %>
-          <h3><%= member.name %> <br>
-            <%= member.prefix %> <%= member.surname %></h3>
+          <h3><%= member.name %> <br> <%= member.prefix %> <%= member.surname %></h3>
           </button>
         <% }) %>    
     </section>
 
     <%- include('./partials/dialog') %>
+
 </main>
 
-<footer>
-
-</footer>
-    
 <%- include('./partials/foot') %>
