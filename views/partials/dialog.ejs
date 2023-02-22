@@ -2,23 +2,29 @@
     <dialog id="<%= member.id %>" class="card">
       <section class="card_sec">
         <div>
-          <h3><%= member.name %> <br> <% if (member.prefix) {%> <%= member.prefix %> <br> <% } %> <%= member.surname %></h3>
-  
-          <% if (member.avatar) { %>
-            <img class="modal_img" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
-            <% }else{ %>
-            <img class="modal_img" src="images/placeholder.jpg" alt="Placeholder avatar" />
-          <% } %>
-  
-          <% if (member.bio) { %>
-            <p><%- member.bio.html %></p>
-            <% }else{ %>
-            <p>Ik ben <%= member.name %> <%= member.prefix %> <%= member.surname %></p>
-          <% } %>
+          <div class="dialog-name">
+            <h3><%= member.name %> <%= member.prefix %> <%= member.surname %></h3>
+            <button class="close">Close</button>
+          </div>
+     
+          <div class="avatar-bio">
+
+              <% if (member.avatar) { %>
+                <img class="modal_img" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+                <% }else{ %>
+                <img class="modal_img" src="images/placeholder.jpg" alt="Placeholder avatar" />
+              <% } %>
+                
+            <div class="member-bio">
+              <% if (member.bio) { %>
+                <p><%- member.bio.html %></p>
+                <% }else{ %>
+                <p>Ik ben <%= member.name %> <%= member.prefix %> <%= member.surname %></p>
+              <% } %>
+            </div>
+          </div>
         </div>
-        <button class="close">
-          Close
-        </button>
+  
       </section>
     </dialog>
     <% }) %>
