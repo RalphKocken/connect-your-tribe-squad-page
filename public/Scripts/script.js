@@ -20,3 +20,20 @@ function changeheight2() {
 //CALC//
 // personIcon.style.height = "calc(216 - <% member.length %> * 100" %;
 
+
+memberbutton.forEach((button)=>{
+    button.addEventListener('click', () => {
+        const dataId = button.dataset.id
+        const card = document.getElementById(dataId)
+        // card.classList.add('active')
+        card.showModal();
+
+        const close_buttons = document.querySelectorAll(".close");
+        close_buttons.forEach((close) => {
+            close.addEventListener("click", () => {
+                card.close()
+            }); 
+        })
+
+    })
+})

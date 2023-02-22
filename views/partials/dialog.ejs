@@ -1,0 +1,24 @@
+<% squad.members.forEach(member => { %>
+    <dialog id="<%= member.id %>" class="card">
+      <section class="card_sec">
+        <div>
+          <h3><%= member.name %> <br> <% if (member.prefix) {%> <%= member.prefix %> <br> <% } %> <%= member.surname %></h3>
+  
+          <% if (member.avatar) { %>
+            <img class="modal_img" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+            <% }else{ %>
+            <img class="modal_img" src="images/placeholder.jpg" alt="Placeholder avatar" />
+          <% } %>
+  
+          <% if (member.bio) { %>
+            <p><%- member.bio.html %></p>
+            <% }else{ %>
+            <p>Ik ben <%= member.name %> <%= member.prefix %> <%= member.surname %></p>
+          <% } %>
+        </div>
+        <button class="close">
+          Close
+        </button>
+      </section>
+    </dialog>
+    <% }) %>
