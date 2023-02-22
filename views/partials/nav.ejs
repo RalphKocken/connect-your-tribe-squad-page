@@ -1,0 +1,40 @@
+<header>
+    <div class="banner">
+        <div class="title">
+            <h1>FDND Squad page</h1>
+            <h2>
+                <%= squad.name %>
+            </h2>
+        </div>
+
+    </div>
+    <nav>
+        <ol class="squad-links">
+            <li <% if (squad.name==='Squad A' ) { %> class="active-squad"<% } %> >
+                    <a href="/?squad=squad-a-2022">Squad A</a>
+            </li>
+            <li <% if (squad.name==='Squad B' ) { %> class="active-squad"<% } %> >
+                    <a href="/?squad=squad-b-2022">Squad B</a>
+            </li>
+            <li <% if (squad.name==='Squat C' ) { %> class="active-squad"<% } %> >
+                    <a href="/?squad=squat-c-2022">Squat C</a>
+            </li>
+        </ol>
+        <div class="sorting">
+            <span>Sorteren op: </span>
+            <select id="sorter"
+                onchange="document.location.href = '/?squad=<%= squad.slug %>&orderBy=name&' + this.value">
+                <option value="direction=ASC">Naam A-Z</option>
+                <option value="direction=DESC">Naam Z-A</option>
+            </select>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const sorter = document.querySelector('#sorter');
+    const direction = new URLSearchParams(window.location.search).get('direction');
+    if (direction != null) {
+        sorter.value = "direction=" + direction;
+    }
+</script>
