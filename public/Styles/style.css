@@ -28,21 +28,30 @@ body{
 }
 
 header{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
     height: 20vh;
     width: 100%;
-    max-width: 35rem;
-    margin: 0 0 5vh 0;
+    max-width: 25rem;
+    margin: 0 auto 10vh auto;
     padding: 2vh;
+}
+
+.intro-text{
+    display: none;
 }
 
 .compare-length{
     position: relative;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 400px;
     height: 40vh;
     border-bottom: 3px solid #d65745;
     margin: 0 auto;
-    gap: 5%;
 }
 
 .shaq-name-height{
@@ -60,14 +69,14 @@ header{
 .shaq{
     height: 100%;
     position: absolute;
-    left: 20%;
+    left: 5%;
     bottom: 0;
 }
 
 .manicon{
     position: absolute;
     bottom: 0;
-    right: 20%;
+    right: 5%;
     height: 80%;
     transition: 1s;
 }
@@ -78,8 +87,7 @@ header{
     overflow: scroll;
     overflow-y: hidden;
     gap: 1.5rem;
-    height: 35vh;
-    padding: 0 0 0 2rem;
+    height: 30vh;
 }
 
 .memberbutton:hover{
@@ -108,45 +116,42 @@ header{
 }
 
 /* dialog styling */
-/* .dialog-card {
-    position: fixed;
-    height: 80vh;
-    width: 50%;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    background-color: black;
-    color: white;
-    /* overflow: visible; */
-    /* border: none;
-}  */
 
 .card[open]{
-    margin: 65vh 0 0 0;
+    margin: 70vh 0 0 0;
     padding: 1rem;
     width: 100vw;
-    height: 35vh;
+    height: 30vh;
     max-width: 100vw;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background: linear-gradient(127deg, rgba(0,0,0,1) 0%, rgba(130,128,128,1) 100%);
     color: white;
     border: none;
+    animation: slide-dialog 0.2s linear;
 }
 
-/* .card_sec{
+@keyframes slide-dialog{
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.card_sec{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
+}
 
 .dialog-name{
-    width: 90vw;
     padding: 0 0 1rem 0;
     display: flex;
-    justify-content: space-between;
+    gap: 4rem;
 }
 
 .avatar-bio{
@@ -159,7 +164,8 @@ header{
     padding: 1rem;
     width: 50%;
     height: 20vh;
-    overflow: scroll;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .close{
@@ -176,16 +182,56 @@ header{
     opacity: 60%;
 }
 
-/* .dialog-name > h3{
-    display: contents;
-} */
-
 .modal_img{
     height: 20vh;
-     border-radius: 10px;
+    border-radius: 10px;
 }
 
+.squad-links{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 2rem;
+}
 
+.squad-links > li{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    color: black;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 1px solid white;
+    color: white;
+    padding: 0.2rem;
+}
+
+.squad-links > li:hover{
+    border: 1px solid #d65745;
+}
+
+.squad-links > li > a{
+    text-decoration: none;
+    color: black;
+    color: white;
+}
+
+.active-squad{
+    background-color: #d65745;
+}
+
+.sorting{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+}
+
+.sorting > input{
+    width: 8rem;
+}
 
 @media only screen and (min-width: 875px){
 
@@ -193,8 +239,23 @@ header{
         display: flex;
     }
 
+    header{
+        width: 100vw;
+        margin: 0 15% 10vh auto;
+    }
+
+    .intro-text{
+        display: block;
+        position: absolute;
+        width: 45%;
+        top: 5%;
+        left: 5%;
+    }
+
     .compare-length{
         height: 70vh;
+        width: 30rem;
+        max-width: 40rem;
     }
 
     .shaq{
@@ -207,10 +268,60 @@ header{
 
     .member-section{
         flex-wrap: wrap;
-        width: 60%;
+        width: 50%;
         height: 70vh;
         overflow-x: hidden;
         overflow-y: scroll;
         justify-content: center;
+        padding: 0 0 2rem 0;
     }
+
+    .card[open]{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: normal;
+        width: 48%;
+        height: 70vh;
+        margin: auto 0 0 auto ;
+        border-top-left-radius: 10px;
+    }
+
+    .dialog-name{
+        gap: 6rem;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .card_sec{
+        width: 100%;
+    }
+
+    .avatar-bio{
+        flex-direction: column;
+        justify-content: normal;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .member-bio{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
+        max-height: 20vh;
+        overflow: visible;
+        margin: 0 0 3rem 0;
+    }
+
+    .modal_img{
+        width: 100%;
+        height: 100%;
+        max-width: 19rem;
+        max-height: 19rem;
+        object-fit: cover;
+    }
+    
+
 }

@@ -1,14 +1,12 @@
 <% squad.members.forEach(member => { %>
     <dialog id="<%= member.id %>" class="card">
       <section class="card_sec">
-        <div>
           <div class="dialog-name">
             <h3><%= member.name %> <%= member.prefix %> <%= member.surname %></h3>
             <button class="close">Close</button>
           </div>
      
           <div class="avatar-bio">
-
               <% if (member.avatar) { %>
                 <img class="modal_img" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
                 <% }else{ %>
@@ -23,8 +21,6 @@
               <% } %>
             </div>
           </div>
-        </div>
-  
       </section>
     </dialog>
     <% }) %>

@@ -1,12 +1,12 @@
 <header>
     <div class="banner">
+
+        <div class="intro-text">
+            <h2>Hoe lang ben jij ten opzichte van Shaquille O'Neal?</h2>
+        </div>
         <div class="title">
             <h1>FDND Squad page</h1>
-            <h2>
-                <%= squad.name %>
-            </h2>
         </div>
-
     </div>
     <nav>
         <ol class="squad-links">
@@ -20,16 +20,26 @@
                     <a href="/?squad=squat-c-2022">Squat C</a>
             </li>
         </ol>
+
         <div class="sorting">
-            <span>Sorteren op: </span>
-            <select id="sorter"
-                onchange="document.location.href = '/?squad=<%= squad.slug %>&orderBy=name&' + this.value">
-                <option value="direction=ASC">Naam A-Z</option>
-                <option value="direction=DESC">Naam Z-A</option>
-            </select>
+
+            <input id="searchbar" class="searchbar" type="text" name="search" placeholder="zoek..">
+            
+            <div>
+                <span>Sorteren op: </span>
+                <select id="sorter"
+                    onchange="document.location.href = '/?squad=<%= squad.slug %>&orderBy=name&' + this.value">
+                    <option value="direction=ASC">Naam A-Z</option>
+                    <option value="direction=DESC">Naam Z-A</option>
+                </select>
+            </div>
+            
         </div>
-        <input id="searchbar" class="searchbar" type="text" name="search" placeholder="zoek..">
+
+        
     </nav>
+ 
+
 </header>
 
 <script>
