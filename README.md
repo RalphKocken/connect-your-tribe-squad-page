@@ -2,11 +2,11 @@
 
 # Squadpage
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
-Een overzichtspagina van alle studenten van FDND. Vergelijk de lengte van elke squadmember met de lengte van Shaquille O'Neal.
+<p align="left">Een overzichtspagina van alle studenten van FDND. Vergelijk de lengte van elke squadmember met de lengte van Shaquille O'Neal.</p>
 
 <img src="https://user-images.githubusercontent.com/106448490/220885323-8eee9b39-c51b-4028-b837-dea0baff4424.png" width="1000">
-<img src="https://user-images.githubusercontent.com/106448490/220885354-03f627a0-9349-4686-89dd-ac3573537b97.png" width="350">
-<img src="https://user-images.githubusercontent.com/106448490/220885338-6a604110-416b-4e41-bc78-5149497a3a20.png" width="350">
+<img src="https://user-images.githubusercontent.com/106448490/220885354-03f627a0-9349-4686-89dd-ac3573537b97.png" width="400" align="middle">
+<img src="https://user-images.githubusercontent.com/106448490/220885338-6a604110-416b-4e41-bc78-5149497a3a20.png" width="400" align="right">
 
 ## Inhoudsopgave
 
