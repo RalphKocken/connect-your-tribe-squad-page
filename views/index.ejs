@@ -21,7 +21,11 @@
         <!-- Hier komen de members -->
         <% squad.members.forEach(member => { %>
 
-        <button data-id="<%= member.id %>" class="member-cards memberbutton" data-name="<%= member.name%>" data-height="<%= Math.floor(Math.random() * (216 - 142) + 142) %>">
+        <button data-id="<%= member.id %>" class="member-cards memberbutton" data-name="<%= member.name%>" data-height="<%= Math.floor(Math.random() * (260 - 142) + 142) %>"
+            <% if (member.colour) { %>
+                style="--favo-kleur: <%= member.colour.hex %>"
+            <% } %>
+        >
           <% if (member.avatar) { %>
           <img class="member-avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
           <% }else{ %>
