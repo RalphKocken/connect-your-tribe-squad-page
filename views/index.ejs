@@ -9,8 +9,8 @@
         </section>
 
         <section class="your-name-height">
-            <p class="your-name">Your name</p>
-            <p class="your-height">183cm</p>
+            <p class="your-name"></p>
+            <p class="your-height"></p>
         </section>
         
         <img class="shaq" src="Images/shaq.png">
@@ -21,7 +21,7 @@
         <!-- Hier komen de members -->
         <% squad.members.forEach(member => { %>
 
-        <button data-id="<%= member.id %>" class="member-cards memberbutton" data-name="<%= member.name%>" data-height="<%= Math.floor(Math.random() * (260 - 142) + 142) %>">
+        <button data-id="<%= member.id %>" class="member-cards memberbutton" data-name="<%= member.name%>" data-height="<%= Math.floor(Math.random() * (216 - 142) + 142) %>">
           <% if (member.avatar) { %>
           <img class="member-avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
           <% }else{ %>

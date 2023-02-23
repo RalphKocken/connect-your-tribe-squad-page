@@ -17,10 +17,6 @@ function changeheight2() {
     personIcon.style.height = "70%"
 }
 
-//CALC//
-// personIcon.style.height = "calc(216 - <% member.length %> * 100" %;
-
-
 // Dialog openen
 memberbutton.forEach((button)=>{
     button.addEventListener('click', () => {
