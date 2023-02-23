@@ -1,5 +1,3 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
 # Squadpage
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 <p align="left">Een overzichtspagina van alle studenten van FDND. Vergelijk de lengte van elke squadmember met de lengte van Shaquille O'Neal.</p>
@@ -28,7 +26,19 @@ Een overzichtspagina van alle studenten van FDND. Vergelijk de lengte van elke s
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+
+### Wat is Node: 
+
+Node is een platform waarmee gebruikers Javascript buiten een browser kunnen gebruiken. Het wordt gebruikt voor server-side scripting. Het is handig om te gebruiken wanneer je snel en efficient met data moet werken. 
+
+### Wat is Express:
+
+Express is een framework voor Node. Express bevat veel handige tools om het gebruik van Node te versnellen. Het geeft een routingsysteem waarmee je gegevens van en naar een API kan sturen. Het wordt veel gebruikt voor server-side oplossingen.
+
+
+### Wat is EJS:
+
+EJS is een "templating" Javascript taal waarmee je HTML kan genereren. Het is handig voor multipage websites waar bepaalde elementen herhaald worden. Denk aan een nav-bar, header of footer etc. Hierdoor wordt het bouwen van websites makkelijker en efficienter.
 
 Deze website is gemaakt met HTML, CSS, Javascript, Node en Express.
 
